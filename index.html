@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matterport Virtual Tour with Logo Overlay</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif; /* Adding a fallback font */
+        }
+        #tour-container {
+            position: relative;
+            width: 100%; /* Full width of the viewport */
+            height: 100%; /* Full height of the viewport */
+            overflow: hidden; /* Ensure video doesn't overflow */
+        }
+        #tour-video {
+            width: 100%;
+            height: 100%;
+        }
+        #logo-overlay {
+            position: fixed;
+            top: 2%; /* Adjust vertical position */
+            left: 15%; /* Adjust horizontal position */
+            max-width: 10%; /* Adjust maximum logo width */
+            height: auto; /* Maintain aspect ratio */
+            z-index: 9999; /* Ensure logo appears on top */
+            border-radius: 20%; /* Make the logo round */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+        }
+        #contact-info {
+            position: fixed;
+            top: 2%;
+            right: 2%;
+            z-index: 9999;
+            color: #fff;
+            font-size: 1.5vw; /* Using percentage for font size */
+        }
+
+        /* Modernizing the design */
+        #contact-info a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        #contact-info a:hover {
+            color: #ccc;
+        }
+
+        /* Media Query for smaller devices */
+        @media (max-width: 768px) {
+            #logo-overlay {
+                top: 1%;
+                left: 1%;
+                max-width: 20%;
+            }
+            #contact-info {
+                font-size: 3vw; /* Using percentage for font size on smaller devices */
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="tour-container">
+        <iframe id="tour-video" src="https://my.matterport.com/show/?m=wZw7Q8RLrJ7" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <a href="https://web.facebook.com/DarAppmr" target="_blank">
+        <img id="logo-overlay" src="assets/images/DAR APP LOGO.png">
+    </a>
+    <div id="contact-info">
+        Mobile : <a href="tel:27001790">27445052</a><br>
+        WhatsApp : <a href="https://api.whatsapp.com/send/?phone=22227001790&text&type=phone_number&app_absent=0">27001790</a>
+    </div>
+</body>
+
+</html>
